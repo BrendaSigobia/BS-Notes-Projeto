@@ -9,9 +9,8 @@
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-             crossorigin="anonymous"
-      />
+            
+        />
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -88,6 +87,52 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
+        <script src="https://kit.fontawesome.com/1dfd9ed065.js" crossorigin="anonymous"></script>
+
+        <div>
+
+            <section>
+            <footer class="text-center text-white mb-8" style="background-color: #5cb85c;" width="100%">
+                {% if not usuario.is_authenticated %}
+                <div class="container p-3 pb-0">
+                    <section class="">
+                    <p class="d-flex justify-content-center align-items-center">
+                        <span class="me-2 pr-3">Crie uma conta gratuitamente</span>
+                        <a class="btn btn-outline-light btn-rounded" href="/cadastro" role="button">
+                            Registre-se
+                        </a>
+                    </p>
+                    </section>
+                </div>
+                {% else %}
+                <div class="container p-3 pb-0">
+                    <section class="">
+                      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        ><i class="fab fa-facebook-f fa-lg"></i
+                      ></a>
+                    
+                      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        ><i class="fab fa-twitter fa-lg"></i
+                      ></a>
+                    
+                      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        ><i class="fab fa-google fa-lg"></i
+                      ></a>
+                    
+                      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        ><i class="fab fa-instagram fa-lg"></i
+                      ></a>
+                    </section>
+                </div>
+                {% endif %}
+
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2023 Todos os direitos reservados.
+                </div>
+            </footer>
+          </section>
+            
+        </div>
 
     </body>
 </html>

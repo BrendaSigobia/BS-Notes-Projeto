@@ -1,7 +1,17 @@
-{% extends "base.html" %}
-<title>
-    {% block title %}Minhas Notas{% endblock %}</title>  
+{% extends "base.html" %} {% block title %}Minhas Notas{% endblock %}  
 
 {% block conteudo %}
-       <h1>Minhas Notas</h1>
-{% endblock %}
+<h3 class="display-3" align="center">Minhas Notas</h3>
+<ul class="list-group list-group-flush" id="notas">
+    {% for nota in usuario.notas %}
+    <li class="list-group-item">{{ nota.data }}</li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    <textarea name="nota" id="nota" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Adicionar Nota</button>
+    </div>
+</form>
+{% endblock %} 

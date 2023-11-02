@@ -1,11 +1,67 @@
+body {
+    overflow-x: hidden;
+}
+
 main {
     background-color: white;
     color: #6f6f6f;
     margin: 0px;
 }
 
-h1 {
-    font-size: 2em;
+h2 {
     color: black;
-    margin-top: 0px;
+    margin-top: 5px;
+}
+
+#seg-subtitulo {
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
+
+h5 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.img-fluid {
+    padding-top: 25px;
+}
+
+footer {
+    margin-top: 15%;
+}
+
+.corousel .carousel-indicators li {
+    background-color: #2ea72e;
+}
+
+.container .carousel-control-prev {
+    left: -70px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: #2ea72e;
+}
+
+.container .carousel-control-prev:hover {
+    color: #108410;
+}
+
+.container .carousel-control-next {
+    right: -70px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: #2ea72e;
+}
+
+.container .carousel-control-next:hover {
+    color: #108410;
+}
+
+.img-fluid {
+    height: 75%;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
