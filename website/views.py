@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, flash
 from .models import Nota
 from flask_login import login_required, current_user
 from . import db
+import json
 
 
 views = Blueprint('views', __name__)
@@ -27,3 +28,16 @@ def minhas_notas():
 @views.route('/')
 def home():
     return render_template("inicio.html", usuario=current_user)
+
+
+@views.route('/delete-note', methods=['POST'])
+def delete_note():
+    nota = json.loads(request.data)
+    notaId = nota['notaId']
+    nota = Nota.query.get(notaId)
+    if nota:
+        if nota.id_usuario == current_user.id:
+            db.session.delete(nota)
+            db.session.commit()
+
+    return jsonify({})

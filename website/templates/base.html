@@ -89,6 +89,19 @@
         ></script>
         <script src="https://kit.fontawesome.com/1dfd9ed065.js" crossorigin="anonymous"></script>
 
+    {% block javascript %}
+    <script type="text/javascript">
+      function deletarNota(notaId) {
+    fetch("/delete-note", {
+        method: "POST",
+        body: JSON.stringify({ notaId: notaId }),
+    }).then((_res) => {
+        window.location.href = "/minhas_notas";
+    });
+    }
+    </script>
+    {% endblock %}
+
         <div>
 
             <section>
